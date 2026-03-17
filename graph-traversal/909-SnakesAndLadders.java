@@ -18,7 +18,7 @@
  * - next row up: left to right
  * - and so on in a zigzag pattern
  *
- * This implementation builds a map from square number -> board value by
+ * We build a HashMap from square number -> board value by
  * iterating row-by-row from the bottom of the board upward:
  * - i represents the row index in the flattened numbering order, not the
  *   original board row

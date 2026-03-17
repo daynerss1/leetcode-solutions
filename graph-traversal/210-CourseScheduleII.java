@@ -20,13 +20,11 @@
  *    its prerequisites has now been satisfied.
  * 4. If any neighbour's indegree becomes 0, push it into the queue.
  *
- * Role of the vis array:
  * We keep a 3-state visitation array for bookkeeping:
  * - vis[x] == 0: course x has not yet been discovered
  * - vis[x] == 1: course x has already been placed into the queue
  * - vis[x] == 2: course x has finished processing, and is popped from the queue
  *
- * Cycle detection:
  * Cycle detection is done by the final indegree check:
  * if any course still has positive indegree after the queue is exhausted,
  * then not all prerequisites could be resolved, so no valid order exists.
