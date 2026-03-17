@@ -21,6 +21,10 @@
  *    recomputed repeatedly. Importantly, we memoize only complete `bottom` rows,
  *    not partial `next` states. A row should only be marked bad after all
  *    possible ways to build the row above it have been tried and failed.
+ *
+ * Time: Exponential in the worst case because multiple next-row constructions
+ * may need to be explored, but memoization cuts it down to O(n^2)
+ * Space: O(number of distinct failed row states + recursion depth)
  */
 class Solution {
     boolean ans = false;
